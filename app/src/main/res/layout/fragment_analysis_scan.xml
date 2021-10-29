@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".scansUI.AnalysisScanFragment">
+
+    <com.budiyev.android.codescanner.CodeScannerView
+        android:id="@+id/analysisScanView"
+        android:layout_width="match_parent"
+        android:layout_height="700dp"
+        app:autoFocusButtonVisible="false"
+        app:flashButtonVisible="false"
+        app:maskColor="#703E3B43" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_below="@+id/analysisScanView">
+
+    <TextView
+        android:id="@+id/timerTextView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:text="15 sec" />
+
+    <TextView
+        android:id="@+id/countTextView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:text="0 scan(s)" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_anchorGravity="bottom|right|end"
+        android:src="@drawable/ic_baseline_home_24" />
+
+    </LinearLayout>
+</RelativeLayout>

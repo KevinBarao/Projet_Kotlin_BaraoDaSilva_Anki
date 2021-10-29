@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="item_detail_icon_size">120dp</dimen>
+
+    <dimen name="fab_level_1">50dp</dimen>
+    <dimen name="fab_level_2">100dp</dimen>
+    <dimen name="fab_level_3">150dp</dimen>
+</resources>

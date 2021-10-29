@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    android:label="QRCode/DataMatrix Scanner"
+    app:startDestination="@id/barcodeListFragment">
+
+    <fragment
+        android:id="@+id/barcodeListFragment"
+        android:name="CoursKotlin.test.itemUI.barcodeList.BarcodeListFragment"
+        android:label="Cours Kotlin"
+        tools:layout="@layout/fragment_barcode_list">
+        <action
+            android:id="@+id/action_itemListFragment_to_basicScanFragment"
+            app:destination="@id/basicScanFragment" />
+        <action
+            android:id="@+id/action_itemListFragment_to_itemBarcodeDetailFragment"
+            app:destination="@id/barcodeDetailFragment">
+            <argument
+                android:name="itemId"
+                android:defaultValue="0" />
+        </action>
+        <action
+            android:id="@+id/action_itemListFragment_to_analysisScanFragment"
+            app:destination="@id/analysisScanFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/basicScanFragment"
+        android:name="CoursKotlin.test.scansUI.BasicScanFragment"
+        android:label="QRCode / Data Matrix scanner"
+        tools:layout="@layout/fragment_basic_scan" >
+        <action
+            android:id="@+id/action_basicScanFragment_to_itemBarcodeDetailFragment"
+            app:destination="@id/barcodeDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/barcodeDetailFragment"
+        android:name="CoursKotlin.test.itemUI.barcodeDetail.BarcodeDetailFragment"
+        android:label="Détails du scan"
+        tools:layout="@layout/fragment_basic_scan_detail">
+        <argument
+            android:name="itemId"
+            android:defaultValue="-1"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/analysisScanFragment"
+        android:name="CoursKotlin.test.scansUI.AnalysisScanFragment"
+        android:label="Analyse scan"
+        tools:layout="@layout/fragment_analysis_scan" >
+        <action
+            android:id="@+id/action_analysisScanFragment_to_analysisScanDetailFragment"
+            app:destination="@id/analysisScanDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/analysisScanDetailFragment"
+        android:name="CoursKotlin.test.scansUI.AnalysisScanDetailFragment"
+        android:label="Détails de l'analyse"
+        tools:layout="@layout/fragment_analysis_scan_detail">
+        <argument
+            android:name="scans"
+            android:defaultValue="0"
+            app:argType="integer" />
+    </fragment>
+</navigation>
