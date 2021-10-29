@@ -1,6 +1,6 @@
  <p align="center">
   <a href="https://example.com/">
-    <img src="https://raw.githubusercontent.com/ankisami/UltimateFight/master/DemoImages/logoUltimateFight.png" alt="Logo" width=242 height=102>
+    <img src="https://github.com/KevinBarao/Projet_Kotlin_BaraoDaSilva_Anki/blob/main/imagesDemo/QRcode1.png" alt="Logo" width=130 height=130>
   </a>
 
   <h1 align="center">Projet Kotlin</h1>
